@@ -1,0 +1,9 @@
+[package]
+categories = ["data-structures", "no-std", "rust-patterns"]
+description = "Provides function traits like the standard library ones, but can be used in stable Rust."
+edition = "2021"
+keywords = ["no-std"]
+license = "MIT"
+name = "fn-traits"
+repository = "https://github.com/EFanZh/fn-traits"
+version = "0.1.0"
