@@ -69,6 +69,8 @@ use core::ops;
 #[cfg(test)]
 extern crate std;
 
+pub mod fns;
+
 /// A function that can be called by value, like the standard library [`FnOnce`](`ops::FnOnce`) trait.
 pub trait FnOnce<Args> {
     /// The return type of the function.
