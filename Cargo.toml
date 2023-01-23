@@ -6,7 +6,7 @@ keywords = ["no-std"]
 license = "MIT"
 name = "fn-traits"
 repository = "https://github.com/EFanZh/fn-traits"
-version = "0.1.1"
+version = "0.1.2"
 
 [dev-dependencies]
 futures = "0.3"

@@ -52,4 +52,16 @@ mod tests {
     pub fn into_std_fn<T, U>(f: impl Fn<(T,), Output = U>) -> impl ops::Fn(T) -> U {
         move |x| f.call((x,))
     }
+
+    pub fn into_std_fn_once_2<T0, T1, U>(f: impl FnOnce<(T0, T1), Output = U>) -> impl ops::FnOnce(T0, T1) -> U {
+        |x, y| f.call_once((x, y))
+    }
+
+    pub fn into_std_fn_mut_2<T0, T1, U>(mut f: impl FnMut<(T0, T1), Output = U>) -> impl ops::FnMut(T0, T1) -> U {
+        move |x, y| f.call_mut((x, y))
+    }
+
+    pub fn into_std_fn_2<T0, T1, U>(f: impl Fn<(T0, T1), Output = U>) -> impl ops::Fn(T0, T1) -> U {
+        move |x, y| f.call((x, y))
+    }
 }
